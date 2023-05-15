@@ -1,234 +1,192 @@
 // Color
 $base-grey: #707070 !default;
 
-@font-face {
-    font-family: mont;
-    src: url(fonts/Mont-ExtraLightDEMO.otf);
-    font-weight: 100;
-}
-@font-face {
-    font-family: mont;
-    src: url(fonts/Mont-HeavyDEMO.otf);
-    font-weight: bold;
-}
-@font-face {
-    font-family: edensor;
-    src: url(fonts/Edensor-Free.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;700&display=swap');
+
 html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: rgba(0, 0, 0, 0.096);
+    font-family: 'inter', sans-serif;
+    background-color: rgba(24, 24, 24, 100);
     margin: auto;
-    margin-top: 20px;
     padding: 0;
-    font-family: mont;
-}
-// Vertical
-.vertical{
-    margin: auto;
-    width: 10%;
-    color: $base-grey;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    text-align: center;
-}
-.vertical img {
-    position: absolute;
-    width: 25%;
-    bottom: 40px;
-    left: 40%;
-}
-.vertical h1{
-    font-weight: bold;
-    font-size: 3em;
-    width: 55px;
-    height: 335px;
-    position: absolute;
-    margin: 0;
-    display: inline-block;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    top: 20px;
+    width: 90%;
+    color: white;
+    a{
+        text-decoration: none;
+        color: white;
+    }
 }
 
-//Header
-header, main, footer{
-    width: 80%;
-    margin: auto;
-    
-}
+header{
+    font-weight: 700;
+    font-size: 1.5em;
+    div{
+        height: 1px;
+        background-color: white;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul{
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                list-style: none;
+            }
+        }
+    }
+} 
 
-header nav {
+.welcome{
+    margin-top: 4%;
+    div{
+        margin-bottom: 8%;
+    }
+    h3,h2{
+        text-align: center;
+    }
+    h3{
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+    h2{
+        text-transform: uppercase;
+        font-size: 4em;
+        margin: 0;
+    }
+    h1{
+        text-transform: uppercase;
+        font-size: 8em;
+        width: 60%;
+        text-align: left;
+        margin: auto;
+        +h1{
+            text-align: right;
+        }
+    }
+    img{
+        width: 10%;
+        margin-bottom: 4%;
+    }
+}
+.me{
     display: flex;
     justify-content: space-between;
-    h2{
-        font-size: 2em;
-        font-weight: 100;
-    }
-    ul{
+    margin-bottom: 8%;
+    .bio{
         display: flex;
-        align-items: center;
-        width: 50%;
-        justify-content: space-between;
-    }
-    li{
-        float: right;
-        font-size: 2em;
-        text-align: center;
-        list-style-type: none;
-        display: inline-block;
-        width: 33%;
-        a{
-            color: $base-grey;
-            text-decoration: none;
+        width: 45%;
+        align-items: flex-start;
+        p{
+            margin: 0;
+        }
+        img{
+            margin-left: 2%;
+            width: 40%;
+            object-fit: contain;
         }
     }
-    li:hover{
-        font-weight: bold;
-    }
-}
-
-
-// Carousel
-
-.cont-carousel{
-
-    h2{
-        margin-top: 50px;
-        text-align: center;
-        font-weight: 100;
-    }
-
-    *, ::before, ::after{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .container{
-        overflow: hidden;
-        max-width: 800px;
-        margin: 8px auto;
-        padding: 0px;
-        position: relative;
-        .cont-btn{
-            animation: fade 2s;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            img{
-                position: absolute;
-                width: 6%;
-                cursor: pointer;
-                height: 100%;
-                object-fit: contain;
-            }
-            img:hover{
-                width: 7%;
-                transition: 0.5s;
-            }
-            img.left:hover{
-                background: linear-gradient(to right, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
-            }
-            img.right:hover{
-                background: linear-gradient(to left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
-            }
-            img.left{
-                padding-left: 2%;
-            }
-            img.right{
-                right: 0;
-                padding-right: 2%;
-                
-            }
-
-        }
-        @keyframes fade {
-            0% {
-                opacity: 0;
-            }
-            90%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
-    }
-    .slider img{
-        max-width: 100%;
-        display: none;
-    }
-
-    
-    img.active{
-        display: block;
-        animation: slide 1.5s;
-    }
-    
-    @keyframes slide {
-        from{
-            transform: translateX(150%);
-        }
-        to{
-            transform: translateX(0);
-        }
-    }
-    
-
-}
-
-// Scroll down
-.scroll-down{
-    
-    margin-top: 4%;
-    text-align: center;
-    img{
-        width: 2%;
-        transform: rotate(270deg);
-        animation: zizo 3s infinite;
-    }
-    @keyframes zizo {
-        0%{
-            transform: scale(1);
-        }
-        50%{
-            transform: scale(1.2);
-        }
-        100%{
-            transform: scale(1);
-        }
-    }
-}
-//Histoire
-
-.histoire{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    .h-img{
-        display: flex;
+    .infos{
         flex-direction: column;
-        align-items: center;
+        width: 45%;
+        .reseau{
+            h2{
+                margin: 0;
+                font-size: 2.2em;
+                font-weight: 100;
+                +p{
+                    font-size: 0.8em;
+                    margin-bottom: 10%;
+                }
+            }
+            .social{
+                width: 60%;
+                display: flex;       
+                justify-content: space-between;
+                margin-bottom: 4%;
+                a{
+                    font-size: 2.2em;
+                    font-weight: 100;
+                }
+                +div{
+                    margin-bottom: 10%;
+                    +a{
+                        font-size: 2.2em;
+                        font-weight: 100;
+                        display: flex;
+                        justify-content: space-between;
+                        img{
+                            width: 0.8em;
+                            vertical-align: middle;
+                            text-align: right;
+                        }
+                        +.ligne_me{
+                            margin-bottom: 6%;
+                            margin-top: 4%;
+                        }
+                    }
+                }
+            }
+            .ligne_me{
+                background-color: white;
+                height: 1px;
+
+            }
+            .cv{
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.7em;
+            }
+        }
     }
-    img{
-        border-radius: 64px;
-        width: 60%;
+
+}
+.realisation{
+    .ligne_real{
+        background-color: white;
+        height: 1px;
     }
-    img+img{
-        margin-top: 20px;
-    }
-    p{
+    .travaux{
         display: flex;
-        font-family: edensor;
-        font-size: 2em;
-        width: 50%;
-        align-items: center;
-        text-align: justify;
+        justify-content: space-around;
+        h2{
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.2em;
+        }
+    }
+    .projet{
+        display: flex;
+        justify-content: space-between;
+        .nombre{
+            width: 10%;
+            h1{
+                font-family: 'Raleway', sans-serif;
+                font-size: 10em;
+                font-weight: 500;
+                rotate: -90deg;
+            }
+        }
+        .desc{
+            width: 40%;
+            img{
+                rotate: -90deg;
+                width: 10%;
+            }
+        }
+        .show{
+            text-align: right;
+            img{
+                width: 90%;
+            }
+            p{
+                text-align: left;
+            }
+        }
     }
 }
