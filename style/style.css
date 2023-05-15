@@ -1,0 +1,250 @@
+@font-face {
+  font-family: mont;
+  src: url(fonts/Mont-ExtraLightDEMO.otf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: mont;
+  src: url(fonts/Mont-HeavyDEMO.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: edensor;
+  src: url(fonts/Edensor-Free.otf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.096);
+  margin: auto;
+  margin-top: 20px;
+  padding: 0;
+  font-family: mont;
+}
+
+.vertical {
+  margin: auto;
+  width: 10%;
+  color: #707070;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.vertical img {
+  position: absolute;
+  width: 25%;
+  bottom: 40px;
+  left: 40%;
+}
+
+.vertical h1 {
+  font-weight: bold;
+  font-size: 3em;
+  width: 55px;
+  height: 335px;
+  position: absolute;
+  margin: 0;
+  display: inline-block;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  top: 20px;
+}
+
+header, main, footer {
+  width: 80%;
+  margin: auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav h2 {
+  font-size: 2em;
+  font-weight: 100;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+header nav li {
+  float: right;
+  font-size: 2em;
+  text-align: center;
+  list-style-type: none;
+  display: inline-block;
+  width: 33%;
+}
+header nav li a {
+  color: #707070;
+  text-decoration: none;
+}
+header nav li:hover {
+  font-weight: bold;
+}
+
+.cont-carousel h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 100;
+}
+.cont-carousel *, .cont-carousel ::before, .cont-carousel ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cont-carousel .container {
+  overflow: hidden;
+  max-width: 800px;
+  margin: 8px auto;
+  padding: 0px;
+  position: relative;
+}
+.cont-carousel .container .cont-btn {
+  -webkit-animation: fade 2s;
+          animation: fade 2s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cont-carousel .container .cont-btn img {
+  position: absolute;
+  width: 6%;
+  cursor: pointer;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cont-carousel .container .cont-btn img:hover {
+  width: 7%;
+  transition: 0.5s;
+}
+.cont-carousel .container .cont-btn img.left:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.cont-carousel .container .cont-btn img.right:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.cont-carousel .container .cont-btn img.left {
+  padding-left: 2%;
+}
+.cont-carousel .container .cont-btn img.right {
+  right: 0;
+  padding-right: 2%;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.cont-carousel .slider img {
+  max-width: 100%;
+  display: none;
+}
+.cont-carousel img.active {
+  display: block;
+  -webkit-animation: slide 1.5s;
+          animation: slide 1.5s;
+}
+@-webkit-keyframes slide {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.scroll-down {
+  margin-top: 4%;
+  text-align: center;
+}
+.scroll-down img {
+  width: 2%;
+  transform: rotate(270deg);
+  -webkit-animation: zizo 3s infinite;
+          animation: zizo 3s infinite;
+}
+@-webkit-keyframes zizo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zizo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.histoire {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.histoire .h-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.histoire img {
+  border-radius: 64px;
+  width: 60%;
+}
+.histoire img + img {
+  margin-top: 20px;
+}
+.histoire p {
+  display: flex;
+  font-family: edensor;
+  font-size: 2em;
+  width: 50%;
+  align-items: center;
+  text-align: justify;
+}/*# sourceMappingURL=style.css.map */
