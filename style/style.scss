@@ -209,7 +209,7 @@ header{
                         font-family: 'Raleway', sans-serif;
                     }
                     img{
-                        width: 10%;
+                        width: 8%;
                         rotate: -90deg;
                     }
                 }
@@ -227,3 +227,97 @@ header{
         
     }
 }
+.competences{
+    >h2{
+        font-weight: 100;
+        text-align: center;
+    }
+    .comp{
+        display: flex;
+        justify-content: space-between;
+        .ligne_comp{
+            width: 1px;
+            background-color: white;
+        }
+        h2{
+            font-family: 'raleway', sans-serif;
+            font-size: 2vw;
+        }
+        img{
+            width: 4vw;
+            object-fit: contain;
+            
+        }
+        p{
+            font-weight: 500;
+            font-size: 1.8vw;
+        }
+        .front{
+            width: 33%;
+            div{
+                div{
+                    display: flex;
+                }
+            }
+        }
+        .gest{
+            width: 33%;
+            text-align: center;
+            div{
+                .ws{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+        .design{
+            width: 33%;
+            text-align: end;
+            .pf, .xd{
+                display: flex;
+            }
+        }   
+    }
+}
+.group {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    div:nth-child(1){
+        background-color: #bea3b7;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        text-align: center;
+    }
+    div:nth-child(2){
+        background-color: #78b2af;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        text-align: center;
+    }
+    div:nth-child(3){
+        width: 15vw;
+        background-color: #cbfc9f;
+    }
+    div:nth-child(4){
+        background-color: #c1bfd9;
+        writing-mode: tb-rl;
+        text-align: center;
+    }
+    div:nth-child(5){
+        background-color: #a78484;
+        writing-mode: tb-rl;
+        text-align: center;
+    }
+  }
+  
+  .item {
+    width: 10vw;
+    height: 32vh;
+    background-color: rgb(255, 255, 255);
+    margin: 1vw;
+    border-radius: 3vw;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+  }

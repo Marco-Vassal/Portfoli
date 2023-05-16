@@ -1,32 +1,26 @@
-const items = document.querySelectorAll('.slider img');
-const styleSlider = document.querySelector('.slider').style;
-const nbSlide = items.length;
-const suivant = document.querySelector('.right');
-const precedent = document.querySelector('.left');
-let count = 0;
+const items = document.querySelectorAll('.item')
+const card = document.querySelectorAll('')
 
-function slideSuivante(){
-    styleSlider.backgroundImage = "url('" + items[count].getAttribute('src') + "')";
-    styleSlider.backgroundSize = "cover"
-    items[count].classList.remove('active');
-    if(count < nbSlide - 1){
-        count++;
-    }else{
-        count = 0;
-    }
-    items[count].classList.add('active');
+const expand = (item, i) => {
+  items.forEach((it, ind) => {
+    if (i === ind) return
+    it.clicked = false
+  })
+  gsap.to(items, {
+    width: item.clicked ? '10vw' : '10vw',
+    duration: 2,
+    ease: 'elastic(1, .6)'
+  })
+  
+  item.clicked = !item.clicked
+  gsap.to(item, {
+    width: item.clicked ? '15vw' : '10vw',
+    duration: 2.5,
+    ease: 'elastic(1, .3)'
+  })
 }
-suivant.addEventListener('click', slideSuivante);
 
-function slidePrecedente(){
-    styleSlider.backgroundImage = "url('" + items[count].getAttribute('src') + "')";
-    styleSlider.backgroundSize = "cover"
-    items[count].classList.remove('active');
-    if(count > 0){
-        count--;
-    }else{
-        count = nbSlide-1;
-    }
-    items[count].classList.add('active');
-}
-precedent.addEventListener('click', slidePrecedente);
+items.forEach((item, i) => {
+  item.clicked = false
+  item.addEventListener('click', () => expand(item, i))
+})

@@ -208,7 +208,7 @@ header nav ul li {
   font-family: "Raleway", sans-serif;
 }
 .realisation .projet .info_projet .bottom .wp img {
-  width: 10%;
+  width: 8%;
   rotate: -90deg;
 }
 .realisation .projet .info_projet .bottom h1 {
@@ -218,4 +218,94 @@ header nav ul li {
   text-transform: uppercase;
   font-family: "raleway", sans-serif;
   letter-spacing: -8px;
+}
+
+.competences > h2 {
+  font-weight: 100;
+  text-align: center;
+}
+.competences .comp {
+  display: flex;
+  justify-content: space-between;
+}
+.competences .comp .ligne_comp {
+  width: 1px;
+  background-color: white;
+}
+.competences .comp h2 {
+  font-family: "raleway", sans-serif;
+  font-size: 2vw;
+}
+.competences .comp img {
+  width: 4vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.competences .comp p {
+  font-weight: 500;
+  font-size: 1.8vw;
+}
+.competences .comp .front {
+  width: 33%;
+}
+.competences .comp .front div div {
+  display: flex;
+}
+.competences .comp .gest {
+  width: 33%;
+  text-align: center;
+}
+.competences .comp .gest div .ws {
+  display: flex;
+  justify-content: center;
+}
+.competences .comp .design {
+  width: 33%;
+  text-align: end;
+}
+.competences .comp .design .pf, .competences .comp .design .xd {
+  display: flex;
+}
+
+.group {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.group div:nth-child(1) {
+  background-color: #bea3b7;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  text-align: center;
+}
+.group div:nth-child(2) {
+  background-color: #78b2af;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  text-align: center;
+}
+.group div:nth-child(3) {
+  width: 15vw;
+  background-color: #cbfc9f;
+}
+.group div:nth-child(4) {
+  background-color: #c1bfd9;
+  writing-mode: tb-rl;
+  text-align: center;
+}
+.group div:nth-child(5) {
+  background-color: #a78484;
+  writing-mode: tb-rl;
+  text-align: center;
+}
+
+.item {
+  width: 10vw;
+  height: 32vh;
+  background-color: rgb(255, 255, 255);
+  margin: 1vw;
+  border-radius: 3vw;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
