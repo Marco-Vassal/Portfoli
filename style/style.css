@@ -19,7 +19,7 @@ body a {
 
 header {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1vw;
 }
 header div {
   height: 1px;
@@ -51,16 +51,16 @@ header nav ul li {
 }
 .welcome h3 {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1vw;
 }
 .welcome h2 {
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 3.5vw;
   margin: 0;
 }
 .welcome h1 {
   text-transform: uppercase;
-  font-size: 8em;
+  font-size: 7.5vw;
   width: 60%;
   text-align: left;
   margin: auto;
@@ -140,47 +140,82 @@ header nav ul li {
 .me .infos .reseau .cv {
   display: flex;
   justify-content: space-between;
-  font-size: 0.7em;
+  font-size: 0.9em;
+  width: 80%;
 }
 
+.realisation .ligne_realisation {
+  background-color: white;
+  height: 1px;
+}
 .realisation .ligne_real {
   background-color: white;
   height: 1px;
+  margin: 4% 0 6% 0;
 }
 .realisation .travaux {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 4%;
 }
 .realisation .travaux h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.2em;
+  font-weight: 100;
+  font-size: 1.5vw;
 }
-.realisation .projet {
+.realisation .projet .info_projet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.realisation .projet .info_projet .top {
   display: flex;
   justify-content: space-between;
 }
-.realisation .projet .nombre {
-  width: 10%;
+.realisation .projet .info_projet .top .nombre {
+  display: flex;
+  width: 45%;
 }
-.realisation .projet .nombre h1 {
+.realisation .projet .info_projet .top .nombre h1 {
+  width: 50%;
   font-family: "Raleway", sans-serif;
-  font-size: 10em;
+  font-size: 10vw;
   font-weight: 500;
-  rotate: -90deg;
-}
-.realisation .projet .desc {
-  width: 40%;
-}
-.realisation .projet .desc img {
-  rotate: -90deg;
-  width: 10%;
-}
-.realisation .projet .show {
+  margin: 0;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
   text-align: right;
 }
-.realisation .projet .show img {
-  width: 90%;
+.realisation .projet .info_projet .top .nombre p {
+  margin: 0;
 }
-.realisation .projet .show p {
-  text-align: left;
+.realisation .projet .info_projet .top img {
+  width: 50%;
+}
+.realisation .projet .info_projet .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.realisation .projet .info_projet .bottom .wp {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  align-items: center;
+}
+.realisation .projet .info_projet .bottom .wp h2 {
+  width: 20%;
+  font-weight: 100;
+  font-family: "Raleway", sans-serif;
+}
+.realisation .projet .info_projet .bottom .wp img {
+  width: 10%;
+  rotate: -90deg;
+}
+.realisation .projet .info_projet .bottom h1 {
+  width: 50%;
+  margin: 0;
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-family: "raleway", sans-serif;
+  letter-spacing: -8px;
 }/*# sourceMappingURL=style.css.map */

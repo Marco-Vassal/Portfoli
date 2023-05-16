@@ -22,7 +22,7 @@ body{
 
 header{
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1vw;
     div{
         height: 1px;
         background-color: white;
@@ -53,16 +53,16 @@ header{
     }
     h3{
         font-weight: 500;
-        font-size: 1.5em;
+        font-size: 1vw;
     }
     h2{
         text-transform: uppercase;
-        font-size: 4em;
+        font-size: 3.5vw;
         margin: 0;
     }
     h1{
         text-transform: uppercase;
-        font-size: 8em;
+        font-size: 7.5vw;
         width: 60%;
         text-align: left;
         margin: auto;
@@ -141,52 +141,89 @@ header{
             .cv{
                 display: flex;
                 justify-content: space-between;
-                font-size: 0.7em;
+                font-size: 0.9em;
+                width: 80%;
             }
         }
     }
 
 }
 .realisation{
+    .ligne_realisation{
+        background-color: white;
+        height: 1px;
+    }
     .ligne_real{
         background-color: white;
         height: 1px;
+        margin: 4% 0 6% 0;
     }
     .travaux{
         display: flex;
         justify-content: space-around;
         h2{
             font-family: 'Raleway', sans-serif;
-            font-size: 1.2em;
+            font-weight: 100;
+            font-size: 1.5vw;
         }
+        margin-bottom: 4%;
     }
     .projet{
-        display: flex;
-        justify-content: space-between;
-        .nombre{
-            width: 10%;
-            h1{
-                font-family: 'Raleway', sans-serif;
-                font-size: 10em;
-                font-weight: 500;
-                rotate: -90deg;
+        .info_projet{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .top{
+                display: flex;
+                justify-content: space-between;
+                .nombre{
+                    display: flex;
+                    width: 45%;
+                    h1{
+                        width: 50%;
+                        font-family: 'Raleway', sans-serif;
+                        font-size: 10vw;
+                        font-weight: 500;
+                        margin: 0;
+                        writing-mode: tb-rl;
+                        transform: rotate(-180deg);
+                        text-align: right;
+                    }
+                    p{margin: 0;}
+                }
+                img{
+                    width: 50%;
+                }
+            }
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                .wp{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 45%;
+                    align-items: center;
+                    h2{
+                        width: 20%;
+                        font-weight: 100;
+                        font-family: 'Raleway', sans-serif;
+                    }
+                    img{
+                        width: 10%;
+                        rotate: -90deg;
+                    }
+                }
+                h1{
+                    width: 50%;
+                    margin: 0;
+                    font-size: 6vw;
+                    text-transform: uppercase;
+                    font-family: 'raleway', sans-serif;
+                    letter-spacing: -8px;
+                }
             }
         }
-        .desc{
-            width: 40%;
-            img{
-                rotate: -90deg;
-                width: 10%;
-            }
-        }
-        .show{
-            text-align: right;
-            img{
-                width: 90%;
-            }
-            p{
-                text-align: left;
-            }
-        }
+        
+        
     }
 }
