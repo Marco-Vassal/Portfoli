@@ -191,8 +191,11 @@ header{
                     }
                     p{margin: 0;}
                 }
-                img{
+                a{
                     width: 50%;
+                    img{
+                        width: 100%;
+                    }
                 }
             }
             .bottom{
@@ -281,43 +284,75 @@ header{
 }
 .group {
     text-align: center;
-    white-space: nowrap;
     overflow: hidden;
-    div:nth-child(1){
+    .item {
+        vertical-align: middle;
+        width: 10vw;
+        height: 24vw;
+        background-color: rgb(255, 255, 255);
+        margin: 1vw;
+        border-radius: 3vw;
+        display: inline-flex;
+        cursor: pointer;
+        color: black;
+      }
+    .crea{
         background-color: #bea3b7;
-        writing-mode: tb-rl;
-        transform: rotate(-180deg);
-        text-align: center;
-    }
-    div:nth-child(2){
+        h1{   
+            transform: rotate(-90deg);
+        }
+    } 
+    .dyna{
         background-color: #78b2af;
-        writing-mode: tb-rl;
-        transform: rotate(-180deg);
-        text-align: center;
+        h1{
+            transform: rotate(-90deg);
+        }
     }
-    div:nth-child(3){
-        width: 15vw;
-        background-color: #cbfc9f;
-    }
-    div:nth-child(4){
+    .poly{
+            width: 15vw;
+            background-color: #cbfc9f;
+    } 
+    .minu{
         background-color: #c1bfd9;
-        writing-mode: tb-rl;
-        text-align: center;
-    }
-    div:nth-child(5){
+        h1{
+            transform: rotate(90deg);
+        }
+        
+    } 
+    .metho{
         background-color: #a78484;
-        writing-mode: tb-rl;
-        text-align: center;
+        h1{
+            transform: rotate(90deg);
+        }
+    } 
+    .div_hidden{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        h1{
+            font-size: 3.5vw;
+        }
     }
+    .div_shown{
+        display: none;
+        width: 100%;
+        h1{
+            font-size: 2.2vw;
+        }
+    }
+    .selected_item{
+        .div_hidden{
+            display: none;
+        }
+        .div_shown{
+            display: block;
+        }
+        img, p {
+            display: block;
+        }
+      }
   }
   
-  .item {
-    width: 10vw;
-    height: 32vh;
-    background-color: rgb(255, 255, 255);
-    margin: 1vw;
-    border-radius: 3vw;
-    display: inline-block;
-    cursor: pointer;
-    color: black;
-  }
+  
+  

@@ -1,0 +1,22 @@
+.Header {
+  font-weight: 700;
+  font-size: 1vw;
+}
+.Header div {
+  height: 1px;
+  background-color: white;
+}
+.Header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header nav ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header nav ul li {
+  list-style: none;
+}/*# sourceMappingURL=Header.css.map */

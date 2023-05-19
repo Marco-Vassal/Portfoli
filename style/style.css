@@ -189,8 +189,11 @@ header nav ul li {
 .realisation .projet .info_projet .top .nombre p {
   margin: 0;
 }
-.realisation .projet .info_projet .top img {
+.realisation .projet .info_projet .top a {
   width: 50%;
+}
+.realisation .projet .info_projet .top a img {
+  width: 100%;
 }
 .realisation .projet .info_projet .bottom {
   display: flex;
@@ -269,43 +272,69 @@ header nav ul li {
 
 .group {
   text-align: center;
-  white-space: nowrap;
   overflow: hidden;
 }
-.group div:nth-child(1) {
-  background-color: #bea3b7;
-  writing-mode: tb-rl;
-  transform: rotate(-180deg);
-  text-align: center;
-}
-.group div:nth-child(2) {
-  background-color: #78b2af;
-  writing-mode: tb-rl;
-  transform: rotate(-180deg);
-  text-align: center;
-}
-.group div:nth-child(3) {
-  width: 15vw;
-  background-color: #cbfc9f;
-}
-.group div:nth-child(4) {
-  background-color: #c1bfd9;
-  writing-mode: tb-rl;
-  text-align: center;
-}
-.group div:nth-child(5) {
-  background-color: #a78484;
-  writing-mode: tb-rl;
-  text-align: center;
-}
-
-.item {
+.group .item {
+  vertical-align: middle;
   width: 10vw;
-  height: 32vh;
+  height: 24vw;
   background-color: rgb(255, 255, 255);
   margin: 1vw;
   border-radius: 3vw;
-  display: inline-block;
+  display: inline-flex;
   cursor: pointer;
   color: black;
+}
+.group .crea {
+  background-color: #bea3b7;
+}
+.group .crea h1 {
+  transform: rotate(-90deg);
+}
+.group .dyna {
+  background-color: #78b2af;
+}
+.group .dyna h1 {
+  transform: rotate(-90deg);
+}
+.group .poly {
+  width: 15vw;
+  background-color: #cbfc9f;
+}
+.group .minu {
+  background-color: #c1bfd9;
+}
+.group .minu h1 {
+  transform: rotate(90deg);
+}
+.group .metho {
+  background-color: #a78484;
+}
+.group .metho h1 {
+  transform: rotate(90deg);
+}
+.group .div_hidden {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.group .div_hidden h1 {
+  font-size: 3.5vw;
+}
+.group .div_shown {
+  display: none;
+  width: 100%;
+}
+.group .div_shown h1 {
+  font-size: 2.2vw;
+}
+.group .selected_item .div_hidden {
+  display: none;
+}
+.group .selected_item .div_shown {
+  display: block;
+}
+.group .selected_item img, .group .selected_item p {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

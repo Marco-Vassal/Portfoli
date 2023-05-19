@@ -1,5 +1,6 @@
 const items = document.querySelectorAll('.item')
-const card = document.querySelectorAll('')
+const elemS = document.querySelectorAll('.div_shown')
+const elemH = document.querySelectorAll('.div_hidden')
 
 const expand = (item, i) => {
   items.forEach((it, ind) => {
@@ -22,5 +23,8 @@ const expand = (item, i) => {
 
 items.forEach((item, i) => {
   item.clicked = false
+  if(i === 2) {
+    item.clicked = true
+  }
   item.addEventListener('click', () => expand(item, i))
 })
