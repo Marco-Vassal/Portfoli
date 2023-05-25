@@ -1,6 +1,6 @@
 const items = document.querySelectorAll('.item')
-const elemS = document.querySelectorAll('.div_shown')
-const elemH = document.querySelectorAll('.div_hidden')
+const cercles = document.querySelectorAll('.cercle')
+const ratio = .1
 
 const expand = (item, i) => {
   items.forEach((it, ind) => {
@@ -39,4 +39,24 @@ items.forEach((item, i) => {
     item.clicked = true
   }
   item.addEventListener('click', () => expand(item, i))
+})
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: ratio
+}
+
+const handleIntersect = function(entries, observer) {
+  entries.forEach(function(entry){
+    console.log(entry.target)
+    if(entry.intersectionRatio > ratio){
+      entry.target.classList.add('reveal-visible')
+      observer.unobserve(entry.target)
+    }
+  })
+}
+const observer = new IntersectionObserver(handleIntersect , options);
+document.querySelectorAll('.reveal').forEach(function(r) {
+  observer.observe(r)
 })
