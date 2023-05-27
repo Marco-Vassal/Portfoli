@@ -7,7 +7,7 @@ class Header extends HTMLElement {
                 <ul>
                     <li><a href="index.html#competences">Compétences</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="ligne_head"></div>

@@ -1,10 +1,11 @@
 const items = document.querySelectorAll('.item')
 const cercles = document.querySelectorAll('.cercle')
 const header = document.getElementById('myHeader')
+const loader = document.querySelector('.loader')
 const sticky = header.offsetTop // Get the offset position of the navbar
 const ratio = .1
 
-
+// Elastic accordion for quality
 const expand = (item, i) => {
   items.forEach((it, ind) => {
     if (i === ind) return
@@ -35,7 +36,6 @@ const expand = (item, i) => {
     ease: 'elastic(1, .3)'
   })
 }
-
 items.forEach((item, i) => {
   item.clicked = false
   if(i === 2) {
@@ -44,12 +44,12 @@ items.forEach((item, i) => {
   item.addEventListener('click', () => expand(item, i))
 })
 
+// animation when scrolling
 const options = {
   root: null,
   rootMargin: '0px',
   threshold: ratio
 }
-
 const handleIntersect = function(entries, observer) {
   entries.forEach(function(entry){
     if(entry.intersectionRatio > ratio){
@@ -76,3 +76,8 @@ function myFunction() {
     header.classList.remove("sticky")
   }
 }
+
+//preloader
+window.addEventListener('load', ()=> {
+  loader.classList.add('fondu-out')
+})
