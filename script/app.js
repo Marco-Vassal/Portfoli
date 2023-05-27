@@ -1,6 +1,9 @@
 const items = document.querySelectorAll('.item')
 const cercles = document.querySelectorAll('.cercle')
+const header = document.getElementById('myHeader')
+const sticky = header.offsetTop // Get the offset position of the navbar
 const ratio = .1
+
 
 const expand = (item, i) => {
   items.forEach((it, ind) => {
@@ -49,14 +52,27 @@ const options = {
 
 const handleIntersect = function(entries, observer) {
   entries.forEach(function(entry){
-    console.log(entry.target)
     if(entry.intersectionRatio > ratio){
-      entry.target.classList.add('reveal-visible')
+      entry.target.classList.remove('reveal')
       observer.unobserve(entry.target)
     }
   })
 }
-const observer = new IntersectionObserver(handleIntersect , options);
+document.documentElement.classList.add('reveal-loaded')
+const observer = new IntersectionObserver(handleIntersect , options)
 document.querySelectorAll('.reveal').forEach(function(r) {
   observer.observe(r)
 })
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()}
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  console.log(sticky)
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky")
+  } else {
+    header.classList.remove("sticky")
+  }
+}

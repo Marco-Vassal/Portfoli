@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Contact</title>
 </head>
+
 <body>
     <main-header></main-header>
     <section class="cercle_contact_ctn">
@@ -15,21 +17,41 @@
         <div></div>
         <div></div>
     </section>
-    <section class="contact">
-        <h1><a href="mailto:marco.vassal07@gmail.com">Marco.vassal07@gmail.com</a> </h1>
-        <h2><a href="https://www.google.com/maps/place/282+Rte+de+Chastanet,+07110+Valgorge">07110 Valgorge, Ardèche, France</a></h2>
-        <h3>Mon CV: <a href=""> Télécharger</a></h3>
-        <a href=""><img src="images/CV.png" alt=""></a>
-        <h3>Téléphone: <a href="tel:+33644870471"> +33 6 44 87 04 71</a></h3>
+    <section class="contact reveal">
+        <h1 class="reveal-1"><a href="mailto:marco.vassal07@gmail.com">Marco.vassal07@gmail.com</a> </h1>
         <div>
-            <a href=""><img src="images/Logo/LinkedIn_Logo.svg" alt=""></a>
-            <a href=""><img src="images/Logo/Malt_logo.svg" alt=""></a>
-            <a href=""><img src="images/Logo/Instagram_text_logo.svg" alt=""></a>
+            <iframe class="reveal-2"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22731.613823921838!2d4.090231327887018!3d44.587785403751695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b4ebb5229ffb99%3A0xa093cb26a540110!2sLe%20Villard%2C%2007110%20Valgorge!5e0!3m2!1sen!2sfr!4v1685097058404!5m2!1sen!2sfr"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-info">
+                <h2 class="reveal-2">
+                    <a href="https://www.google.com/maps/place/282+Rte+de+Chastanet,+07110+Valgorge">07110 Valgorge,
+                        Ardèche, France</a>
+                </h2>
+                <h3 class="reveal-6">Téléphone: <a href="tel:+33644870471"> +33 6 44 87 04 71</a></h3>
+                <h3 class="reveal-7">Mon CV: <a href=""><img src="images/CV.png" alt=""></a></h3>
+                
+                <div>
+                    <div class="contact-bar reveal-6"></div>
+                    <div class="contact-reseau">
+                        <a href="" class="reveal-7"><img src="images/Logo/LinkedIn_Logo.svg" alt=""></a>
+                        <a href="" class="reveal-8"><img src="images/Logo/Malt_logo.svg" alt=""></a>
+                        <a href="" class="reveal-9"><img src="images/Logo/Instagram_text_logo.svg" alt=""></a>    
+                    </div>
+                    <div class="contact-bar reveal-10"></div>
+                </div>
+            </div>
         </div>
+
+
+
+
+
     </section>
     <main-footer></main-footer>
     <script src="script/header_footer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="script/app.js"></script>
 </body>
+
 </html>

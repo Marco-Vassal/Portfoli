@@ -1,8 +1,8 @@
 class Header extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-        <header>
-            <nav>
+        <header id="myHeader">
+            <nav class="navbar">
                 <a href="index.html">Marco Vassal</a>
                 <ul>
                     <li><a href="index.html#competences">Compétences</a></li>

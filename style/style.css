@@ -21,13 +21,20 @@ body a {
 }
 
 header {
+  position: fixed;
+  width: 90%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 0 5%;
+  background-color: rgb(21, 21, 21);
   transform: translateY(-100%);
   opacity: 0;
   animation: slide-in-anim 1.6s cubic-bezier(0, 0.5, 0.58, 1) forwards;
   height: 5vw;
   font-weight: 700;
   font-size: 1vw;
-  margin-bottom: 4%;
+  transition: 0.4s;
 }
 @keyframes slide-in-anim {
   40% {
@@ -67,6 +74,14 @@ header nav ul li {
   list-style: none;
 }
 
+.sticky {
+  height: 4vw;
+  transition: 0.4s;
+}
+.sticky .ligne_head {
+  opacity: 0;
+}
+
 footer {
   margin-top: 8%;
   display: flex;
@@ -74,7 +89,8 @@ footer {
   flex-direction: column;
   height: 32vh;
 }
-footer p, footer a {
+footer p,
+footer a {
   font-family: "Raleway", sans-serif;
   margin: 0;
 }
@@ -90,12 +106,16 @@ footer .footer_ctn {
   display: flex;
   justify-content: space-between;
 }
-footer .footer_ctn .footer_nav, footer .footer_ctn .footer_res, footer .footer_ctn .footer_info {
+footer .footer_ctn .footer_nav,
+footer .footer_ctn .footer_res,
+footer .footer_ctn .footer_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-footer .footer_ctn .footer_nav h2, footer .footer_ctn .footer_res h2, footer .footer_ctn .footer_info h2 {
+footer .footer_ctn .footer_nav h2,
+footer .footer_ctn .footer_res h2,
+footer .footer_ctn .footer_info h2 {
   margin: 0;
 }
 footer .footer_ctn .footer_info .info_dev {
@@ -118,10 +138,14 @@ footer #copyright {
   margin: 2%;
 }
 
+.welcome {
+  margin-top: 8vw;
+}
 .welcome div {
   margin-bottom: 4%;
 }
-.welcome h3, .welcome h2 {
+.welcome h3,
+.welcome h2 {
   text-align: center;
 }
 .welcome h3 {
@@ -295,6 +319,7 @@ footer #copyright {
   writing-mode: tb-rl;
   transform: rotate(-180deg);
   text-align: right;
+  transition: 0s;
 }
 .realisation .projet .info_projet .top .nombre p {
   margin: 0;
@@ -333,7 +358,7 @@ footer #copyright {
   letter-spacing: -8px;
 }
 
-.competences .reveal > h2 {
+.competences > div > h2 {
   font-family: "raleway", sans-serif;
   font-size: 3vw;
   text-align: center;
@@ -392,12 +417,14 @@ footer #copyright {
 .competences .comp .gest .gest_ctn > img {
   width: 6vw;
 }
-.competences .comp .gest .gest_ctn .wp, .competences .comp .gest .gest_ctn .sh {
+.competences .comp .gest .gest_ctn .wp,
+.competences .comp .gest .gest_ctn .sh {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.competences .comp .gest .gest_ctn .wp img, .competences .comp .gest .gest_ctn .sh img {
+.competences .comp .gest .gest_ctn .wp img,
+.competences .comp .gest .gest_ctn .sh img {
   margin: 8%;
 }
 .competences .comp .design {
@@ -412,7 +439,8 @@ footer #copyright {
   flex-direction: column;
   justify-content: center;
 }
-.competences .comp .design .design_ctn .pf, .competences .comp .design .design_ctn .xd {
+.competences .comp .design .design_ctn .pf,
+.competences .comp .design .design_ctn .xd {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,7 +457,7 @@ footer #copyright {
   margin-top: 8%;
   text-align: center;
 }
-.qualite .reveal > h2 {
+.qualite > div > h2 {
   font-family: "raleway", sans-serif;
   font-size: 3vw;
   font-weight: 500;
@@ -461,7 +489,8 @@ footer #copyright {
 .qualite .qual_group .group .div_shown h1 {
   font-size: 2.2vw;
 }
-.qualite .qual_group .group .div_shown img, .qualite .qual_group .group .div_shown p {
+.qualite .qual_group .group .div_shown img,
+.qualite .qual_group .group .div_shown p {
   display: block;
 }
 .qualite .qual_group .group .div_shown p {
@@ -490,7 +519,8 @@ footer #copyright {
 .qualite .qual_group .group .dyna h1 {
   transform: rotate(-90deg);
 }
-.qualite .qual_group .group .crea .div_shown h1, .qualite .qual_group .group .dyna .div_shown h1 {
+.qualite .qual_group .group .crea .div_shown h1,
+.qualite .qual_group .group .dyna .div_shown h1 {
   rotate: 90deg;
 }
 .qualite .qual_group .group .poly {
@@ -522,7 +552,8 @@ footer #copyright {
 .qualite .qual_group .group .metho h1 {
   transform: rotate(90deg);
 }
-.qualite .qual_group .group .metho .div_shown h1, .qualite .qual_group .group .minu .div_shown h1 {
+.qualite .qual_group .group .metho .div_shown h1,
+.qualite .qual_group .group .minu .div_shown h1 {
   rotate: -90deg;
 }
 .qualite .dl_cv {
@@ -622,40 +653,86 @@ footer #copyright {
 }
 
 .contact {
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin: 4% 0;
+  margin-top: 10%;
 }
 .contact h1 {
-  font-size: 2em;
-  margin: 0;
-  letter-spacing: 0.4vw;
-  text-decoration: underline;
+  font-size: 2.5vw;
+  letter-spacing: 0.8vw;
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+  text-underline-offset: 16px;
 }
-.contact h2, .contact h3 {
-  font-family: "Abril Fatface", cursive;
-  font-weight: lighter;
+.contact h2 {
+  font-size: 2vw;
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+  text-underline-offset: 5px;
 }
-.contact img {
-  width: 6vw;
-}
-.contact div {
+.contact > div {
+  margin-top: 4%;
   display: flex;
   justify-content: space-around;
-  width: 60%;
 }
-.contact div img {
+.contact > div iframe {
+  border: 0;
+  width: 25vw;
+  height: 32vw;
+  background-color: #A2D2AF;
+}
+.contact > div .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+.contact > div .contact-info img {
   width: 8vw;
 }
+.contact > div .contact-info h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5vw;
+}
+.contact > div .contact-info h3 a {
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+  text-underline-offset: 5px;
+}
+.contact > div .contact-info h3 img {
+  transition: 0.1s;
+}
+.contact > div .contact-info h3 img:hover {
+  border: rgb(106, 106, 230) 2px solid;
+}
+.contact > div .contact-info > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact > div .contact-info > div .contact-bar {
+  width: 110%;
+  background-color: white;
+  height: 1px;
+  margin: 2% 0;
+}
+.contact > div .contact-info > div .contact-reseau {
+  display: flex;
+  justify-content: space-evenly;
+  width: 150%;
+  align-items: center;
+}
 
-.cercle_contact_ctn, .cercle_home_ctn, .cercle_services_ctn {
+.cercle_contact_ctn,
+.cercle_home_ctn,
+.cercle_services_ctn {
   top: 0;
   width: 100vw;
 }
-.cercle_contact_ctn div, .cercle_home_ctn div, .cercle_services_ctn div {
+.cercle_contact_ctn div,
+.cercle_home_ctn div,
+.cercle_services_ctn div {
   z-index: -2;
   display: block;
   position: absolute;
@@ -696,6 +773,22 @@ footer #copyright {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 8vw;
+}
+.services > div {
+  text-align: center;
+  margin-bottom: 4%;
+}
+.services > div h1 {
+  font-size: 3vw;
+  font-weight: 500;
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+  text-underline-offset: 8px;
+  margin-bottom: 0;
+}
+.services > div h2 {
+  font-weight: 500;
 }
 .services section {
   width: 100%;
@@ -731,18 +824,6 @@ footer #copyright {
 .services section article:nth-child(2) {
   margin-top: 8%;
 }
-.services h1 {
-  font-size: 3vw;
-  font-weight: 500;
-  -webkit-text-decoration: underline 1px;
-          text-decoration: underline 1px;
-  text-underline-offset: 8px;
-  margin-bottom: 0;
-}
-.services h2 {
-  font-weight: 500;
-  margin-bottom: 4%;
-}
 
 .tarifs {
   margin-top: 8%;
@@ -751,13 +832,15 @@ footer #copyright {
   align-items: center;
   flex-direction: column;
 }
-.tarifs h1 {
+.tarifs div {
+  margin-bottom: 8%;
+}
+.tarifs div h1 {
   font-size: 3vw;
   font-weight: 500;
   -webkit-text-decoration: underline 1px;
           text-decoration: underline 1px;
   text-underline-offset: 8px;
-  margin-bottom: 8%;
 }
 .tarifs section {
   width: 100%;
@@ -838,7 +921,8 @@ footer #copyright {
   z-index: 0;
   transition: 1s;
 }
-.devis .btn::before, .devis .btn::after {
+.devis .btn::before,
+.devis .btn::after {
   position: absolute;
   background: rgb(21, 21, 21);
   z-index: -1;
@@ -906,49 +990,38 @@ footer #copyright {
   animation: slide-in-cercle 1.4s cubic-bezier(0, 0, 0, 1) forwards;
 }
 
-.reveal [class*=reveal-] {
-  opacity: 0;
-  transform: translateY(100px);
+.reveal-loaded .reveal [class*=reveal-] {
+  opacity: 0 !important;
+  transform: translateY(100px) !important;
+  transition: 0s !important;
 }
-
-.reveal-visible [class*=reveal-] {
-  opacity: 1;
-  transform: translateY(0);
+.reveal-loaded [class*=reveal-] {
   transition: 1s cubic-bezier(0.5, 0, 0, 1);
 }
-
-.reveal-visible .reveal-2 {
+.reveal-loaded .reveal-2 {
   transition-delay: 0.1s;
 }
-
-.reveal-visible .reveal-3 {
+.reveal-loaded .reveal-3 {
   transition-delay: 0.2s;
 }
-
-.reveal-visible .reveal-4 {
+.reveal-loaded .reveal-4 {
   transition-delay: 0.3s;
 }
-
-.reveal-visible .reveal-5 {
+.reveal-loaded .reveal-5 {
   transition-delay: 0.4s;
 }
-
-.reveal-visible .reveal-6 {
+.reveal-loaded .reveal-6 {
   transition-delay: 0.14s;
 }
-
-.reveal-visible .reveal-7 {
+.reveal-loaded .reveal-7 {
   transition-delay: 0.18s;
 }
-
-.reveal-visible .reveal-8 {
+.reveal-loaded .reveal-8 {
   transition-delay: 0.22s;
 }
-
-.reveal-visible .reveal-9 {
+.reveal-loaded .reveal-9 {
   transition-delay: 0.26s;
 }
-
-.reveal-visible .reveal-10 {
+.reveal-loaded .reveal-10 {
   transition-delay: 0.3s;
 }/*# sourceMappingURL=style.css.map */

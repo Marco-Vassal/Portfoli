@@ -1,0 +1,39 @@
+# Activer la réécriture d'URL
+RewriteEngine On
+
+# Redirection des URLs non-www vers les URLs www
+RewriteCond %{HTTP_HOST} !^www\.marco-vassal\.fr$
+RewriteRule ^(.*)$ http://www.marco-vassal.fr/$1 [R=301,L]
+
+# Redirection des URLs en HTTP vers HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.marco-vassal.fr/$1 [R=301,L]
+
+# Supprimer l'extension .html des URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Empêcher l'accès direct aux fichiers spécifiques
+<Files "config.php">
+  Order allow,deny
+  Deny from all
+</Files>
+
+<Files "database.sql">
+  Order allow,deny
+  Deny from all
+</Files>
+
+# Bloquer l'accès aux répertoires sensibles
+Options -Indexes
+
+# Interdire l'accès à certains types de fichiers
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|inc|bak|swp)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Réécriture d'URL pour les fichiers sans extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
