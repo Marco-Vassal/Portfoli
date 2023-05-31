@@ -7,7 +7,7 @@ class Header extends HTMLElement {
                 <ul>
                     <li><a href="index.html#competences">Compétences</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="ligne_head"></div>
@@ -38,16 +38,16 @@ class Header extends HTMLElement {
                 </div>
                 <div class="footer_nav">
                     <h2 class="reveal-1">Navigation</h2>
-                    <a class="reveal-2"href="index.html">Accueil</a>
-                    <a  class="reveal-3" href="index.html#competences">Compétences</a>
+                    <a class="reveal-2" href="index.html">Accueil</a>
+                    <a class="reveal-3" href="index.html#competences">Compétences</a>
                     <a class="reveal-4" href="serices.html">Services</a>
                     <a class="reveal-5" href="contact.html">Contact</a>
                 </div>
                 <div class="footer_res">
                     <h2 class="reveal-1">Réseaux</h2>
-                    <a class="reveal-2" href="">Linkedin</a>
-                    <a class="reveal-3" href="">Malt</a>
-                    <a class="reveal-4" href="">Instagram</a>
+                    <a class="reveal-2" target="_blank" href="https://www.linkedin.com/in/marco-vassal-144327204">Linkedin</a>
+                    <a class="reveal-3" target="_blank" href="https://www.malt.fr/profile/marcovassal">Malt</a>
+                    <a class="reveal-4" target="_blank" href="https://www.instagram.com/marco_vassal/">Instagram</a>
                 </div>
             </div>
         </footer>`

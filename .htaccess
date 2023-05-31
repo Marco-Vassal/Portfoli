@@ -1,4 +1,5 @@
 RewriteEngine on
+Option +FollowSymlinks
 
 # force the www. to be here
 RewriteCond %{HTTP_HOST} ^marco-vassal.fr [NC]

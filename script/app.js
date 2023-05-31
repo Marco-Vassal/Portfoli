@@ -1,7 +1,9 @@
 const items = document.querySelectorAll('.item')
-const cercles = document.querySelectorAll('.cercle')
+const cercle = document.querySelector('.cercle')
 const header = document.getElementById('myHeader')
 const loader = document.querySelector('.loader')
+const main = document.querySelector('main')
+const pages = document.querySelectorAll('.navbar a')
 const sticky = header.offsetTop // Get the offset position of the navbar
 const ratio = .1
 
@@ -69,7 +71,6 @@ window.onscroll = function() {myFunction()}
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-  console.log(sticky)
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky")
   } else {
@@ -79,5 +80,28 @@ function myFunction() {
 
 //preloader
 window.addEventListener('load', ()=> {
-  loader.classList.add('fondu-out')
+  
+  if(loader){
+    loader.classList.add('fondu-out')
+    main.style.display = 'block'
+    setTimeout(()=>{
+      loader.style.display = 'none'
+    }, 400)
+  }
+  const cercle = document.querySelector('.cercle')
+  const height = document.body.offsetHeight/2
+  cercle.style.height = height + "px"
 })
+
+//parallaxe des cercles dans le fonds
+window.addEventListener("scroll", function() {
+  const scrolled = window.pageYOffset
+  cercle.style.transform = "translateY(" + scrolled * 0.6 + "px)"
+})
+
+window.addEventListener("resize", () => {
+
+  const cercle = document.querySelector('.cercle')
+  const height = document.body.offsetHeight/2
+  cercle.style.height = height + "px"
+});
