@@ -1135,4 +1135,32 @@ footer #copyright {
 }
 .reveal-loaded .reveal-10 {
   transition-delay: 0.3s;
+}
+
+.mentions {
+  margin: auto;
+  width: 60%;
+  margin-top: 8vw;
+  text-align: justify;
+}
+.mentions h1, .mentions h2, .mentions h3 {
+  text-align: center;
+  margin: 8%;
+}
+.mentions p {
+  margin: 0;
+}
+.mentions span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.mentions li {
+  margin: 4%;
+}
+.mentions a {
+  color: lightblue;
+  text-decoration: underline;
+}
+.mentions p:last-child {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

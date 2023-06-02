@@ -1314,3 +1314,31 @@ footer {
         transition-delay: .30s;
     }
 } 
+
+.mentions{
+    margin: auto;
+    width: 60%;
+    margin-top: 8vw;
+    text-align: justify;
+    h1,h2,h3{
+        text-align: center;
+        margin: 8%;
+    }
+    p{
+        margin: 0;
+    }
+    span{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    li{
+        margin: 4%;
+    }
+    a{
+        color: lightblue;
+        text-decoration: underline;
+    }
+    p:last-child{
+        text-align: center;
+    }
+}
