@@ -33,7 +33,7 @@ class Header extends HTMLElement {
                     <div class="info_stack reveal-5">
                         <p>Stack utilisé: HTML/CSS/JS(Gsap)</p>
                         <p>© Copyright 2023 - Marco VASSAL. Tous droits réservés</p>
-                        <a href="">Mentions légales</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
                     </div>
                 </div>
                 <div class="footer_nav">
