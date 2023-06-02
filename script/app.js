@@ -66,18 +66,6 @@ document.querySelectorAll('.reveal').forEach(function(r) {
   observer.observe(r)
 })
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()}
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky")
-  } else {
-    header.classList.remove("sticky")
-  }
-}
-
 //preloader
 window.addEventListener('load', ()=> {
   
@@ -93,8 +81,14 @@ window.addEventListener('load', ()=> {
   cercle.style.height = height + "px"
 })
 
-//parallaxe des cercles dans le fonds
 window.addEventListener("scroll", function() {
+  //Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky")
+  } else {
+    header.classList.remove("sticky")
+  }
+  //Parallax effect
   const scrolled = window.pageYOffset
   cercle.style.transform = "translateY(" + scrolled * 0.6 + "px)"
 })

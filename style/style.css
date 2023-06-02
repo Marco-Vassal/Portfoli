@@ -186,6 +186,7 @@ footer #copyright {
 }
 
 .welcome {
+  overflow: hidden;
   margin-top: 8vw;
 }
 .welcome div {
@@ -203,28 +204,44 @@ footer #copyright {
   animation: slide-in-anim 1.4s cubic-bezier(0, 0, 0, 1) forwards;
 }
 .welcome h2 {
+  margin: 0;
   text-transform: uppercase;
   font-size: 3.5vw;
-  margin: 0;
   transform: translateX(100%);
   opacity: 0;
   animation: slide-in-anim 1.6s cubic-bezier(0, 0.5, 0.58, 1) forwards;
 }
 .welcome h1 {
+  overflow: hidden;
   text-transform: uppercase;
   font-size: 7.5vw;
   width: 60%;
   text-align: left;
   margin: auto;
-  transform: translateX(-100%);
+}
+.welcome h1 span {
+  display: inline-block;
   opacity: 0;
-  animation: slide-in-anim 1.8s cubic-bezier(0.63, 0.12, 0.4, 1.15) forwards;
+  animation: slide-under-title 1.8s cubic-bezier(0.63, 0.12, 0.4, 1.15) forwards;
+}
+.welcome h1:last-child {
+  animation-delay: 0.2s;
+}
+@keyframes slide-under-title {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 .welcome h1 + h1 {
   text-align: right;
-  transform: translateX(100%);
-  opacity: 0;
-  animation: slide-in-anim 2s cubic-bezier(0.63, 0.12, 0.4, 1.15) forwards;
 }
 .welcome img {
   transform: translateY(-500%);
@@ -771,12 +788,6 @@ footer #copyright {
   border-radius: 50%;
 }
 
-.cercle_home_ctn {
-  z-index: -4;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-}
 .cercle_home_ctn div:nth-child(1) {
   width: 50vw;
   height: 50vw;
