@@ -8,7 +8,7 @@ const sticky = header.offsetTop // Get the offset position of the navbar
 const ratio = .1
 
 // Elastic accordion for quality
-if (window.matchMedia("(min-width: 413px)").matches) {
+if (window.matchMedia("(min-width: 501px)").matches) {
   /* La largeur minimum de l'affichage est 391 px inclus */
   const expand = (item, i) => {
     items.forEach((it, ind) => {

@@ -1371,7 +1371,7 @@ main {
     display: flex;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 500px) {
   .welcome {
     margin-top: 16vw;
   }
