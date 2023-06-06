@@ -8,8 +8,8 @@ const sticky = header.offsetTop // Get the offset position of the navbar
 const ratio = .1
 
 // Elastic accordion for quality
-if (window.matchMedia("(min-width: 501px)").matches) {
-  /* La largeur minimum de l'affichage est 391 px inclus */
+if (window.matchMedia("(min-width: 1071px)").matches) {
+  /* La largeur minimum de l'affichage est 1071 px inclus */
   const expand = (item, i) => {
     items.forEach((it, ind) => {
       if (i === ind) return
@@ -24,7 +24,6 @@ if (window.matchMedia("(min-width: 501px)").matches) {
       ease: 'elastic(1, .6)'
     })
     if (item.clicked) {
-      console.log(item.getElementsByClassName('div_shown'))
       item.getElementsByClassName('div_shown')[0].style.display = "none"
       item.getElementsByClassName('div_hidden')[0].style.display = "flex"
     } else {
@@ -47,8 +46,46 @@ if (window.matchMedia("(min-width: 501px)").matches) {
     }
     item.addEventListener('click', () => expand(item, i))
   })
-} else {
-  /* L'affichage est inférieur à 391px de large */
+} else if(window.matchMedia("(min-width: 831px)").matches) {
+  /* La largeur minimum de l'affichage est 831 px inclus */
+  const expand = (item, i) => {
+    items.forEach((it, ind) => {
+      if (i === ind) return
+      it.clicked = false
+      it.getElementsByClassName('div_shown')[0].style.display = "none"
+      it.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    })
+    gsap.to(items, {
+      width: item.clicked ? '10vw' : '10vw',
+      height: item.clicked ? '24vw' : '24vw',
+      duration: 2,
+      ease: 'elastic(1, .6)'
+    })
+    if (item.clicked) {
+      item.getElementsByClassName('div_shown')[0].style.display = "none"
+      item.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    } else {
+      item.getElementsByClassName('div_shown')[0].style.display = "block"
+      item.getElementsByClassName('div_hidden')[0].style.display = "none"
+    }
+  
+    item.clicked = !item.clicked
+    gsap.to(item, {
+      width: item.clicked ? '20vw' : '10vw',
+      height: item.clicked ? '35vw' : '24vw',
+      duration: 3,
+      ease: 'elastic(1, .3)'
+    })
+  }
+  items.forEach((item, i) => {
+    item.clicked = false
+    if(i === 2) {
+      item.clicked = true
+    }
+    item.addEventListener('click', () => expand(item, i))
+  })
+}else if(window.matchMedia("(min-width: 670px)").matches) {
+  /* La largeur minimum de l'affichage est 551 px inclus */
   const expand = (item, i) => {
     items.forEach((it, ind) => {
       if (i === ind) return
@@ -58,12 +95,11 @@ if (window.matchMedia("(min-width: 501px)").matches) {
     })
     gsap.to(items, {
       width: item.clicked ? '75vw' : '75vw',
-      height: item.clicked ? '24vw' : '24vw',
+      height: item.clicked ? '10vw' : '10vw',
       duration: 2,
       ease: 'elastic(1, .6)'
     })
     if (item.clicked) {
-      console.log(item.getElementsByClassName('div_shown'))
       item.getElementsByClassName('div_shown')[0].style.display = "none"
       item.getElementsByClassName('div_hidden')[0].style.display = "flex"
     } else {
@@ -74,7 +110,159 @@ if (window.matchMedia("(min-width: 501px)").matches) {
     item.clicked = !item.clicked
     gsap.to(item, {
       width: item.clicked ? '75vw' : '75vw',
-      height: item.clicked ? '90vw' : '24vw',
+      height: item.clicked ? '35vw' : '10vw',
+      duration: 3,
+      ease: 'elastic(0.5, .3)'
+    })
+  }
+  items.forEach((item, i) => {
+    item.clicked = false
+    if(i === 0) {
+      item.clicked = true
+    }
+    item.addEventListener('click', () => expand(item, i))
+  })
+}else if(window.matchMedia("(min-width: 551px)").matches) {
+  /* La largeur minimum de l'affichage est 551 px inclus */
+  const expand = (item, i) => {
+    items.forEach((it, ind) => {
+      if (i === ind) return
+      it.clicked = false
+      it.getElementsByClassName('div_shown')[0].style.display = "none"
+      it.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    })
+    gsap.to(items, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '10vw' : '10vw',
+      duration: 2,
+      ease: 'elastic(1, .6)'
+    })
+    if (item.clicked) {
+      item.getElementsByClassName('div_shown')[0].style.display = "none"
+      item.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    } else {
+      item.getElementsByClassName('div_shown')[0].style.display = "block"
+      item.getElementsByClassName('div_hidden')[0].style.display = "none"
+    }
+  
+    item.clicked = !item.clicked
+    gsap.to(item, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '42vw' : '10vw',
+      duration: 3,
+      ease: 'elastic(0.5, .3)'
+    })
+  }
+  items.forEach((item, i) => {
+    item.clicked = false
+    if(i === 0) {
+      item.clicked = true
+    }
+    item.addEventListener('click', () => expand(item, i))
+  })
+}else if(window.matchMedia("(min-width: 431px)").matches) {
+  /* La largeur minimum de l'affichage est 551 px inclus */
+  const expand = (item, i) => {
+    items.forEach((it, ind) => {
+      if (i === ind) return
+      it.clicked = false
+      it.getElementsByClassName('div_shown')[0].style.display = "none"
+      it.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    })
+    gsap.to(items, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '16vw' : '16vw',
+      duration: 2,
+      ease: 'elastic(1, .6)'
+    })
+    if (item.clicked) {
+      item.getElementsByClassName('div_shown')[0].style.display = "none"
+      item.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    } else {
+      item.getElementsByClassName('div_shown')[0].style.display = "block"
+      item.getElementsByClassName('div_hidden')[0].style.display = "none"
+    }
+  
+    item.clicked = !item.clicked
+    gsap.to(item, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '60vw' : '16vw',
+      duration: 3,
+      ease: 'elastic(0.5, .3)'
+    })
+  }
+  items.forEach((item, i) => {
+    item.clicked = false
+    if(i === 0) {
+      item.clicked = true
+    }
+    item.addEventListener('click', () => expand(item, i))
+  })
+}else if(window.matchMedia("(min-width: 371px)").matches) {
+  /* La largeur minimum de l'affichage est 551 px inclus */
+  const expand = (item, i) => {
+    items.forEach((it, ind) => {
+      if (i === ind) return
+      it.clicked = false
+      it.getElementsByClassName('div_shown')[0].style.display = "none"
+      it.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    })
+    gsap.to(items, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '16vw' : '16vw',
+      duration: 2,
+      ease: 'elastic(1, .6)'
+    })
+    if (item.clicked) {
+      item.getElementsByClassName('div_shown')[0].style.display = "none"
+      item.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    } else {
+      item.getElementsByClassName('div_shown')[0].style.display = "block"
+      item.getElementsByClassName('div_hidden')[0].style.display = "none"
+    }
+  
+    item.clicked = !item.clicked
+    gsap.to(item, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '70vw' : '16vw',
+      duration: 3,
+      ease: 'elastic(0.5, .3)'
+    })
+  }
+  items.forEach((item, i) => {
+    item.clicked = false
+    if(i === 0) {
+      item.clicked = true
+    }
+    item.addEventListener('click', () => expand(item, i))
+  })
+}else{
+  /* L'affichage est inférieur à 371px de large */
+  const expand = (item, i) => {
+    items.forEach((it, ind) => {
+      if (i === ind) return
+      it.clicked = false
+      it.getElementsByClassName('div_shown')[0].style.display = "none"
+      it.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    })
+    gsap.to(items, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '16vw' : '16vw',
+      duration: 2,
+      ease: 'elastic(1, .6)'
+    })
+    if (item.clicked) {
+      item.getElementsByClassName('div_shown')[0].style.display = "none"
+      item.getElementsByClassName('div_hidden')[0].style.display = "flex"
+    } else {
+      item.getElementsByClassName('div_shown')[0].style.display = "block"
+      item.getElementsByClassName('div_hidden')[0].style.display = "none"
+    }
+  
+    item.clicked = !item.clicked
+    gsap.to(item, {
+      width: item.clicked ? '75vw' : '75vw',
+      height: item.clicked ? '90vw' : '16vw',
       duration: 3,
       ease: 'elastic(0.5, .3)'
     })
@@ -139,14 +327,12 @@ window.addEventListener("scroll", function() {
 window.addEventListener("resize", () => {
   const cercle = document.querySelector('.cercle')
   const height = document.body.clientHeight/2
-  console.log(height)
   cercle.style.height = height + "px"
 });
 
 
 //header hamburger
 const hamburger = document.querySelector(".hambergur")
-console.log(hamburger)
 hamburger.addEventListener("click", () => {
     
     document.querySelector(".fullscreen").classList.toggle("active")

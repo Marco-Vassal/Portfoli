@@ -109,7 +109,7 @@ main {
     transform: translateY(-100%);
     opacity: 0;
     animation: slide-in-anim 1.6s cubic-bezier(0, 0.5, 0.58, 1) forwards;
-    height: 5vw;
+    height: 10vh;
     font-weight: 700;
     font-size: 100%;
     transition: .4s;
@@ -149,7 +149,7 @@ main {
     transform: translateY(-100%);
     opacity: 0;
     animation: slide-in-anim 1.6s cubic-bezier(0, 0.5, 0.58, 1) forwards;
-    height: 16vw;
+    height: 8vh;
     font-weight: 700;
     font-size: 100%;
     transition: .4s;
@@ -290,7 +290,7 @@ main {
 
 
 .sticky {
-    height: 4vw !important;
+    height: 8vh !important;
     transition: .4s;
 
     .ligne_head {
@@ -411,13 +411,13 @@ main {
             margin: 4% 0;
 
             img {
-                width: 10vw;
+                width: 5vh;
             }
         }
 
         .footer_nav {
             text-align: center;
-            margin: 8% 0;
+            margin: 4% 0;
         }
     }
 
@@ -447,7 +447,7 @@ main {
 
     h3 {
         font-weight: 500;
-        font-size: 1vw;
+        font-size: 1em;
         transform: translateX(-100%);
         opacity: 0;
         animation: slide-in-anim 1.4s cubic-bezier(0, 0, 0, 1) forwards;
@@ -456,7 +456,7 @@ main {
     h2 {
         margin: 0;
         text-transform: uppercase;
-        font-size: 3.5vw;
+        font-size: 3.5em;
         transform: translateX(100%);
         opacity: 0;
         animation: slide-in-anim 1.6s cubic-bezier(0, 0.5, 0.58, 1) forwards;
@@ -465,7 +465,7 @@ main {
     h1 {
         overflow: hidden;
         text-transform: uppercase;
-        font-size: 7.5vw;
+        font-size: 7.5em;
         width: 60%;
         text-align: left;
         margin: auto;
@@ -623,7 +623,7 @@ main {
         h2 {
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
-            font-size: 1.5vw;
+            font-size: 1.5em;
         }
 
         margin-bottom: 4%;
@@ -1630,7 +1630,97 @@ main {
     }
 }
 
+@media screen and (max-width: 1430px) {
+    .bio{
+        p{
+            span:nth-child(3){
+                display: none;
+            }
+        }
+        
+    }
+    .qualite{
+        .qual_group{
+            .item{
+                .div_shown{
+                    p{
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1220px) {
+    .welcome{
+        h1{
+            width: 80%;
+        }
+    }
+    .me{
+        .infos .reseau .cv{
+            width: 100%;
+        }
+        .bio {
+            margin-bottom: 20%;
+
+            p {
+                text-align: justify;
+                font-size: 0.86em;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+    .realisation .projet .info_projet .bottom h1{
+        letter-spacing: 0;
+    }
+    .qualite{
+        .qual_group{
+            .group{
+                .item{
+                    .div_shown{
+                        p{
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1070px) {
+    .welcome{
+        h1{
+            font-size: 6em;
+        }
+    }
+    .qualite{
+        .qual_group{
+            .group{
+                .item{
+                    .div_shown{
+                        p{
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+                .poly{
+                    width: 20vw;
+                    height: 35vw;
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 1024px) {
+    .footer_desktop{
+        .footer_ctn{
+            width: 100%;
+        }
+    }
     .header-desktop {
         display: none;
     }
@@ -1638,9 +1728,388 @@ main {
     .header-ham {
         display: flex;
     }
+    .me .infos .reseau .social {
+        width: 100%;
+    }
+    .services{
+        section article{
+            width: 40%;
+            div{
+                width: 100%;
+                img{
+                    width: 100%;
+                    height: 30vw;
+                }
+            }
+        }
+    }
+    .devis{
+        > div > div p:nth-child(2){
+            font-size: 0.8em;
+        }
+    }
+    .contact{
+        >div{
+            .contact-info{
+                width: 60%;
+                h2{
+                    text-align: center;
+                }
+                h3{
+                    justify-content: space-around;
+                }
+                >div{
+                    .contact-reseau{
+                        width: 110%;
+                    }
+                }
+            }
+        }
+    }
 }
+@media screen and (max-width: 910px) {
+    .me{
+        .infos .reseau .cv{
+            .annee{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .job{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .bio{
+            margin-bottom: 0;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 65%;
+            }
+        }
+    }
+    .qualite{
+        .qual_group{
+            .group{
+                .item{
+                    .div_shown{
+                        p{
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        h1 {
+            font-size: 1.3em;
+        }
 
-@media screen and (max-width: 500px) {
+        margin-top: 12%;
+
+        >div {
+            align-items: center;
+            flex-direction: column-reverse;
+
+            iframe {
+                display: none;
+            }
+
+            .contact-info {
+
+                h2,
+                h3 {
+                    margin: 4% 0;
+                    font-size: 1.2em;
+                }
+
+                h2 {
+                    text-align: center;
+                }
+
+                h3:nth-child(3) {
+                    flex-direction: column;
+                    text-align: center;
+
+                    a {
+                        margin-top: 4%;
+
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+
+                >div{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 830px) {
+    .realisation .projet .info_projet .bottom .wp h2{
+        font-size: 1em;
+    }
+    .competences{
+        >div {
+           >h2 {
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
+        .comp p{
+            font-size: 1em;
+        }
+    } 
+    .qualite {
+        margin-top: 16%;
+
+        div {
+            h2 {
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
+
+        .qual_group {
+            height: 100%;
+
+            .group {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .item {
+                    width: 75vw;
+                    height: 10vw;
+                    overflow: hidden;
+
+                    .div_hidden {
+                        h1 {
+                            font-size: 2em;
+                            rotate: 90deg;
+                        }
+                    }
+
+                    .div_shown {
+                        p{
+                            font-size: 1em;
+                        }
+                        h1 {
+                            font-size: 2em;
+                        }
+                    }
+                }
+
+                .crea {
+                    height: 35vw;
+
+                    .div_hidden {
+                        display: none;
+                    }
+
+                    .div_shown {
+                        display: block;
+                    }
+                }
+
+                .poly {
+                    .div_hidden {
+                        display: flex;
+
+                        h1 {
+                            writing-mode: horizontal-tb;
+                            text-orientation: mixed;
+                            letter-spacing: 0;
+                            rotate: 0deg;
+                            margin: 0;
+                        }
+                    }
+
+                    .div_shown {
+                        display: none;
+                    }
+                }
+
+                .minu,
+                .metho {
+                    .div_hidden {
+                        h1 {
+                            rotate: -90deg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dl_cv {
+            margin-top: 8%;
+            width: 100%;
+            height: 6vw;
+
+            .button {
+                width: 50%;
+                font-size: 1em;
+            }
+        }
+    }
+    .services{
+        div {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+    .tarifs {
+        div {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+    .devis > div > div p:nth-child(1){
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width: 730px) {
+    .me{
+        .infos .reseau .cv{
+            .annee{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+            }
+        }
+    }
+    .welcome{
+        h2{
+            font-size: 2.5em;
+        }
+        h1{
+            font-size: 5em;
+        }
+    }
+    .realisation {
+        .ligne_realisation {
+            margin: 8% 0;
+        }
+
+        .travaux {
+            margin-bottom: 8%;
+        }
+
+        .projet {
+            .ligne_real {
+                margin: 8% 0;
+            }
+
+            .info_projet {
+                .top {
+                    flex-direction: column;
+
+                    .nombre {
+                        width: 100%;
+                        align-items: center;
+
+                        h1 {
+                            width: 12vw;
+                        }
+
+                        p {
+                            text-align: justify;
+                            font-size: 0.86em;
+                        }
+                    }
+
+                    a {
+                        width: 100%;
+                        text-align: right;
+                        margin-top: 4%;
+                    }
+                }
+
+                .bottom {
+                    flex-direction: column-reverse;
+
+                    .wp {
+                        width: 100%;
+
+                        h2 {
+                            width: 100%;
+                            margin: 0;
+                        }
+
+                        img {
+                            rotate: 180deg;
+                        }
+                    }
+
+                    h1 {
+                        width: 100%;
+                        letter-spacing: 0px;
+                        font-size: 3em;
+                    }
+                }
+            }
+        }
+    }
+    .footer_desktop {
+        display: none;
+    }
+
+    .footer_phone {
+        display: block;
+    }
+    .devis > div > div p:nth-child(1){
+        font-size: 2em;
+    }
+    .contact > div .contact-info h2, .contact > div .contact-info h3{
+        margin: 8% 0;
+    }
+}
+@media screen and (max-width: 670px) {
+    .qualite {
+        .qual_group {
+            .group {
+                .item {
+                    width: 75vw;
+                    height: 10vw;
+                    .div_shown{
+                        p{
+                            font-size: 1em;
+                        }
+                    }
+                }
+                .crea {
+                    height: 42vw;
+                }
+            }
+        }
+        .dl_cv {
+            margin-top: 8%;
+            width: 100%;
+            height: 8vw;
+
+            .button {
+                width: 70%;
+                font-size: 1em;
+            }
+        }
+    }
+    .contact {
+        margin-top: 16%;
+        > div .contact-info{
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 550px) {
     .welcome {
         margin-top: 16vw;
 
@@ -1674,15 +2143,15 @@ main {
         }
 
         .bio {
-            margin-bottom: 20%;
-
+            align-items: flex-start;
+            margin-bottom: 10%;
+            flex-direction: row;
             p {
                 text-align: justify;
                 font-size: 0.86em;
-
-                span {
-                    display: none;
-                }
+            }
+            img{
+                width: 40%;
             }
         }
 
@@ -1718,80 +2187,14 @@ main {
     }
 
     .realisation {
-        .ligne_realisation {
-            margin: 8% 0;
-        }
-
         .travaux {
-            margin-bottom: 8%;
-
             h2 {
-                font-size: 1em;
-            }
-        }
-
-        .projet {
-            .ligne_real {
-                margin: 16% 0;
-            }
-
-            .info_projet {
-                .top {
-                    flex-direction: column;
-
-                    .nombre {
-                        width: 100%;
-
-                        h1 {
-                            width: 12vw;
-                        }
-
-                        p {
-                            text-align: justify;
-                            font-size: 0.86em;
-                        }
-                    }
-
-                    a {
-                        width: 100%;
-                        margin-top: 8%;
-                    }
-                }
-
-                .bottom {
-                    flex-direction: column-reverse;
-
-                    .wp {
-                        width: 100%;
-
-                        h2 {
-                            width: 100%;
-                            margin: 0;
-                        }
-
-                        img {
-                            rotate: 180deg;
-                        }
-                    }
-
-                    h1 {
-                        width: 100%;
-                        letter-spacing: 0px;
-                        font-size: 3em;
-                    }
-                }
+                font-size: 1.2em;
             }
         }
     }
 
     .competences {
-        div {
-            h2 {
-                font-size: 2em;
-                font-weight: bold;
-            }
-        }
-
         .comp {
             flex-direction: column;
 
@@ -1852,117 +2255,13 @@ main {
         }
     }
 
-    .qualite {
-        margin-top: 16%;
-
-        div {
-            h2 {
-                font-size: 2em;
-                font-weight: bold;
-            }
-        }
-
-        .qual_group {
-            height: 100%;
-
-            .group {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .item {
-                    width: 75vw;
-                    height: 24vw;
-                    overflow: hidden;
-
-                    .div_hidden {
-                        h1 {
-                            font-size: 2em;
-                            rotate: 90deg;
-                        }
-                    }
-
-                    .div_shown {
-                        h1 {
-                            font-size: 2em;
-                        }
-                    }
-                }
-
-                .crea {
-                    height: 90vw;
-
-                    .div_hidden {
-                        display: none;
-                    }
-
-                    .div_shown {
-                        display: block;
-                    }
-                }
-
-                .poly {
-                    .div_hidden {
-                        display: flex;
-
-                        h1 {
-                            writing-mode: horizontal-tb;
-                            text-orientation: mixed;
-                            letter-spacing: 0;
-                            rotate: 0deg;
-                            margin: 0;
-                        }
-                    }
-
-                    .div_shown {
-                        display: none;
-                    }
-                }
-
-                .minu,
-                .metho {
-                    .div_hidden {
-                        h1 {
-                            rotate: -90deg;
-                        }
-                    }
-                }
-            }
-        }
-
-        .dl_cv {
-            margin-top: 8%;
-            width: 100%;
-            height: 10.5vw;
-
-            .button {
-                width: 100%;
-                font-size: 1em;
-            }
-        }
-    }
-
-    .footer_desktop {
-        display: none;
-    }
-
-    .footer_phone {
-        display: block;
-    }
-
     .services {
         margin-top: 16vw;
-
-        div {
-            h1 {
-                font-size: 2em;
-            }
-        }
-
         section {
             flex-direction: column;
 
             article {
+                width: 100%;
                 div {
                     width: 100%;
 
@@ -2004,7 +2303,25 @@ main {
             }
         }
     }
+    .qualite{
+        .qual_group{
+            .group{
+                .crea {
+                    height: 60vw;
+                }
+            }
+        }
+        .dl_cv {
+            margin-top: 8%;
+            width: 100%;
+            height: 10vw;
 
+            .button {
+                width: 75vw;
+                font-size: 1em;
+            }
+        }
+    }
     .devis {
         div {
             flex-direction: column;
@@ -2065,6 +2382,50 @@ main {
 
                 >div{
                     display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    .qualite{
+        .qual_group{
+            .group {
+                .item {
+                    .div_shown{
+                        p{
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+                .crea {
+                    height: 70vw;
+                }
+            }
+        }
+    }
+    .contact{
+        h1{
+            letter-spacing: 0;
+        }
+        > div .contact-info{
+            width: 100%;
+        }
+    } 
+}
+@media screen and (max-width: 370px) {
+    .qualite{
+        .qual_group{
+            .group {
+                .item {
+                    .div_shown{
+                        p{
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+                .crea {
+                    height: 90vw;
                 }
             }
         }
