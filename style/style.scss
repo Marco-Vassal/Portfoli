@@ -528,7 +528,7 @@ main {
 
         img {
             margin-left: 2%;
-            width: 40%;
+            min-width: 40%;
             object-fit: contain;
         }
     }
@@ -728,6 +728,7 @@ main {
 
         h2 {
             font-weight: 300;
+            font-size: 2.4em;
         }
 
         img {

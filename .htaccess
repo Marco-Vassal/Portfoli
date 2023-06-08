@@ -1,5 +1,5 @@
-RewriteEngine on
 Option +FollowSymlinks
+RewriteEngine on
 
 # force the www. to be here
 RewriteCond %{HTTP_HOST} ^marco-vassal.fr [NC]
@@ -7,7 +7,8 @@ RewriteRule ^(.*)$ https://www.marco-vassal.fr/$1 [L,R=301]
 
 # remove .html
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]+)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.html$ /$1 [L,R=301]
 
 # delete l'index.html at the end of url
 RewriteCond %{HTTP_HOST} !^www\. [NC]
