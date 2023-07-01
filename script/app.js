@@ -161,7 +161,7 @@ if (window.matchMedia("(min-width: 1071px)").matches) {
     item.addEventListener('click', () => expand(item, i))
   })
 }else if(window.matchMedia("(min-width: 431px)").matches) {
-  /* La largeur minimum de l'affichage est 551 px inclus */
+  /* La largeur minimum de l'affichage est 431 px inclus */
   const expand = (item, i) => {
     items.forEach((it, ind) => {
       if (i === ind) return
@@ -199,7 +199,7 @@ if (window.matchMedia("(min-width: 1071px)").matches) {
     item.addEventListener('click', () => expand(item, i))
   })
 }else if(window.matchMedia("(min-width: 371px)").matches) {
-  /* La largeur minimum de l'affichage est 551 px inclus */
+  /* La largeur minimum de l'affichage est 371 px inclus */
   const expand = (item, i) => {
     items.forEach((it, ind) => {
       if (i === ind) return

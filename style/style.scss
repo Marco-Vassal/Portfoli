@@ -509,8 +509,6 @@ main {
     }
 }
 
-
-
 .me {
     display: flex;
     justify-content: space-between;
@@ -2307,6 +2305,9 @@ main {
     .qualite{
         .qual_group{
             .group{
+                .item {
+                    height: 16vw;
+                }
                 .crea {
                     height: 60vw;
                 }

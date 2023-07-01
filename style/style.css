@@ -1821,6 +1821,9 @@ main {
   .tarifs section a div p #prix {
     font-size: 1.6em;
   }
+  .qualite .qual_group .group .item {
+    height: 16vw;
+  }
   .qualite .qual_group .group .crea {
     height: 60vw;
   }
