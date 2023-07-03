@@ -1143,14 +1143,16 @@ main {
 .services section article div h3 {
   margin: 0;
 }
-.services section article div p {
-  padding: 4%;
+.services section article div div {
   border-left: 1px solid white;
   border-right: 1px solid white;
+}
+.services section article div div p {
+  padding: 4%;
   margin-bottom: 0;
   text-align: center;
 }
-.services section article div img {
+.services section article div div img {
   width: 25vw;
   height: 20vw;
   -o-object-fit: cover;

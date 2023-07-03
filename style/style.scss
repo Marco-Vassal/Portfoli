@@ -1348,22 +1348,23 @@ main {
                 h3 {
                     margin: 0;
                 }
-
-                p {
-                    padding: 4%;
+                div{
                     border-left: 1px solid $elem-color;
                     border-right: 1px solid $elem-color;
-                    margin-bottom: 0;
-                    text-align: center;
-
+                    p {
+                        padding: 4%;
+                        
+                        margin-bottom: 0;
+                        text-align: center;
+    
+                    }
+    
+                    img {
+                        width: 25vw;
+                        height: 20vw;
+                        object-fit: cover;
+                    }
                 }
-
-                img {
-                    width: 25vw;
-                    height: 20vw;
-                    object-fit: cover;
-                }
-
                 +div {
                     margin-top: 15vw;
                 }
