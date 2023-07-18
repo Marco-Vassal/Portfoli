@@ -8,6 +8,7 @@ class Header extends HTMLElement {
                     <li><a href="index.html#competences">Compétences</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="visio"><a target="_blank" href="https://calendly.com/marco-vassal/30min">Réserver un appel</a></li>
                 </ul>
             </nav>
             <div class="ligne_head"></div>
@@ -25,6 +26,7 @@ class Header extends HTMLElement {
                 <li style="--animation-order: 2;"><a href="index.html#competences">Compétences</a></li>
                 <li style="--animation-order: 3;"><a href="services.html">Services</a></li>
                 <li style="--animation-order: 4;"><a href="contact.html">Contact</a></li>
+                <li class="visio-ham" style="--animation-order: 5;"><a href="https://calendly.com/marco-vassal/30min">Réserver un appel</a></li>
             </ul>
             <div class="close">
                 <div></div>

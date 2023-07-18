@@ -83,6 +83,21 @@ main {
   font-size: 100%;
   transition: 0.4s;
 }
+.header-desktop .visio {
+  text-align: center;
+}
+.header-desktop .visio a {
+  border: solid 2px rgb(61, 72, 224);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(61, 72, 224);
+  margin: 4px;
+  transition: 0.4s;
+}
+.header-desktop .visio a:hover {
+  background-color: white;
+  color: rgb(61, 72, 224);
+}
 @keyframes slide-in-anim {
   40% {
     opacity: 0;
@@ -112,7 +127,7 @@ main {
   align-items: center;
 }
 .header-desktop nav ul {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,6 +154,9 @@ main {
   display: none;
   justify-content: space-between;
   align-items: center;
+}
+.header-ham .visio-ham {
+  text-align: center;
 }
 .header-ham .hambergur {
   width: 1.6rem;
@@ -1144,19 +1162,18 @@ main {
   margin: 0;
 }
 .services section article div div {
+  text-align: center;
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
 .services section article div div p {
   padding: 4%;
   margin-bottom: 0;
-  text-align: center;
 }
 .services section article div div img {
-  width: 25vw;
-  height: 20vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 20vw;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .services section article div + div {
   margin-top: 15vw;
@@ -1428,10 +1445,13 @@ main {
   }
   .services section article div {
     width: 100%;
+    text-align: center;
   }
-  .services section article div img {
-    width: 100%;
-    height: 30vw;
+  .services section article div div img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 80%;
+    height: 25vw;
   }
   .devis > div > div p:nth-child(2) {
     font-size: 0.8em;
@@ -1659,7 +1679,8 @@ main {
   .devis > div > div p:nth-child(1) {
     font-size: 2em;
   }
-  .contact > div .contact-info h2, .contact > div .contact-info h3 {
+  .contact > div .contact-info h2,
+  .contact > div .contact-info h3 {
     margin: 8% 0;
   }
 }
@@ -1804,9 +1825,11 @@ main {
   .services section article div {
     width: 100%;
   }
-  .services section article div img {
-    width: 100%;
-    height: 80vw;
+  .services section article div div img {
+    width: 60%;
+    height: 40%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .tarifs div h1 {
     font-size: 2em;
